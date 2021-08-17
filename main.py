@@ -27,7 +27,13 @@ def get_shop_list_by_dishes(dishes, person_count):
     for dish in dishes:
         for ingredients in cook_book[dish]:
             shop_list[ingredients['ingredient_name']] = {'measure': ingredients['measure'], 'quantity': int(ingredients['quantity'] * person_count)}
-        [print(key, ':', value) for key, value in shop_list.items()]
+        #((key, ':', value) for key, value in shop_list.items())
+        # for printing double if you get the same thing
+        pprint(shop_list)
+        # if you want to ignore the repeat of the same thing ex: 'Омлет', 'Омлет'. Use this:>>>>>>
+        #return pprint(shop_list)
+
+
 
 
 
